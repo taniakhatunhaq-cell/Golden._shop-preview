@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Shop</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      text-align: center;
+    }
+
+    header img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+    }
+
+    h1 {
+      margin: 10px 0;
+    }
+
+    .info {
+      font-size: 14px;
+      padding: 10px;
+      line-height: 1.6;
+    }
+
+    .demo {
+      color: red;
+      font-weight: bold;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 15px;
+      padding: 15px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    img.product {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    button {
+      margin-top: 8px;
+      padding: 10px;
+      border: none;
+      background: black;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 13px;
+      color: gray;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- BANNER -->
+<header>
+  <img src="https://i.ibb.co/B56Rdxns/IMG-5039.png" alt="Golden Shop Banner">
+</header>
+
+<h1>Golden Shop</h1>
+
+<p class="demo">⚠️ Demo website (Final version will be customized)</p>
+
+<div class="info">
+  Assalamu Alaikum 🌙<br>
+  All kind of items available<br>
+  No return | No exchange | No refund<br>
+  Cash on delivery available<br><br>
+
+  📍 Kolkata<br>
+  📞 8334994072<br>
+  📩 DM to order
+</div>
+
+<!-- PRODUCTS -->
+<div class="container">
+
+  <div class="card">
+    <img class="product" src="https://i.ibb.co/JWmyHQ63/IMG-5038.png">
+    <p>Product 1</p>
+    <button onclick="order('Product 1')">Order on WhatsApp</button>
+  </div>
+
+  <div class="card">
+    <img class="product" src="https://i.ibb.co/jvv0t0Zp/IMG-5037.jpg">
+    <p>Product 2</p>
+    <button onclick="order('Product 2')">Order on WhatsApp</button>
+  </div>
+
+  <div class="card">
+    <img class="product" src="https://i.ibb.co/Fqx6S7zz/IMG-5036.jpg">
+    <p>Product 3</p>
+    <button onclick="order('Product 3')">Order on WhatsApp</button>
+  </div>
+
+  <div class="card">
+    <img class="product" src="https://i.ibb.co/5WnCnypk/IMG-5035.jpg">
+    <p>Product 4</p>
+    <button onclick="order('Product 4')">Order on WhatsApp</button>
+  </div>
+
+</div>
+
+<footer>
+  © Golden Shop | WhatsApp Orders Available
+</footer>
+
+<script>
+  function order(product) {
+    let phone = "918334994072";
+    let message = "I want to order " + product;
+    let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+    window.open(url, "_blank");
+  }
+</script>
+
+</body>
+</html>
