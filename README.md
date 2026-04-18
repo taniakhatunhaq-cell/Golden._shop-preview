@@ -1,0 +1,1 @@
+# Golden._shop-preview
